@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C2043" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yx0-f3-fK0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="89B-Md-uD0">
+            <objects>
+                <navigationController id="yx0-f3-fK0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kX1-DU-Ejy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jfC-d0-dGT" kind="relationship" relationship="rootViewController" id="MfE-1E-rnu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZ9-YJ-CAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="302"/>
+        </scene>
+        <!--Alarm Landing View Controller-->
+        <scene sceneID="Wjt-qq-at1">
+            <objects>
+                <viewController id="jfC-d0-dGT" customClass="AlarmLandingViewController" customModule="Running_Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cd8-aF-HMA"/>
+                        <viewControllerLayoutGuide type="bottom" id="WHF-AX-b21"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dNo-3O-XFC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OZ-Kt-Otf">
+                                <rect key="frame" x="262" y="284" width="77" height="33"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Add Alarm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonSubmit:" destination="jfC-d0-dGT" eventType="touchUpInside" id="Bc5-Xo-KQg"/>
+                                    <segue destination="POF-dT-o8b" kind="show" identifier="buttonSubmitSegue" id="1bv-jl-skt"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lNu-3T-Thp">
+                                <rect key="frame" x="0.0" y="325" width="600" height="275"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmCell" rowHeight="73" id="f2A-hb-U0S" customClass="AlarmTableViewCell" customModule="Running_Alarm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f2A-hb-U0S" id="kbx-yw-BfB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="236-r6-0id">
+                                                    <rect key="frame" x="8" y="25" width="129" height="21"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="26"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="alarmTimeListingLabel" destination="236-r6-0id" id="rij-YT-iqW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhF-Ls-9DZ">
+                                <rect key="frame" x="16" y="99" width="568" height="95"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="79"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lNu-3T-Thp" firstAttribute="top" secondItem="5OZ-Kt-Otf" secondAttribute="bottom" constant="8" id="Bax-cp-Z9Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jhF-Ls-9DZ" secondAttribute="trailing" id="Nhh-6O-tw4"/>
+                            <constraint firstItem="jhF-Ls-9DZ" firstAttribute="leading" secondItem="dNo-3O-XFC" secondAttribute="leadingMargin" id="PLd-Hg-wOK"/>
+                            <constraint firstAttribute="centerY" secondItem="5OZ-Kt-Otf" secondAttribute="centerY" id="XDU-Ur-Q4d"/>
+                            <constraint firstAttribute="centerX" secondItem="5OZ-Kt-Otf" secondAttribute="centerX" id="YFz-r5-Ru5"/>
+                            <constraint firstItem="jhF-Ls-9DZ" firstAttribute="top" secondItem="cd8-aF-HMA" secondAttribute="bottom" constant="35" id="ZqM-w4-oCM"/>
+                            <constraint firstItem="lNu-3T-Thp" firstAttribute="leading" secondItem="dNo-3O-XFC" secondAttribute="leading" id="dgC-kI-kgh"/>
+                            <constraint firstItem="WHF-AX-b21" firstAttribute="top" secondItem="lNu-3T-Thp" secondAttribute="bottom" id="j7N-2U-N6C"/>
+                            <constraint firstAttribute="trailing" secondItem="lNu-3T-Thp" secondAttribute="trailing" id="kmT-Ti-1vM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gHq-Mb-KIP"/>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="jhF-Ls-9DZ" id="jtn-WM-eFN"/>
+                        <outlet property="tableView" destination="lNu-3T-Thp" id="qQt-nv-LSd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ykM-ra-3fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="302"/>
+        </scene>
+        <!--Alarm Maker View Controller-->
+        <scene sceneID="vcF-f3-YBj">
+            <objects>
+                <viewController id="POF-dT-o8b" customClass="AlarmMakerViewController" customModule="Running_Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="add-rb-CNF"/>
+                        <viewControllerLayoutGuide type="bottom" id="5S5-0T-rMN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Os-Mc-JYE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="giV-Zn-OYC">
+                                <rect key="frame" x="0.0" y="64" width="600" height="289"/>
+                            </mapView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sXK-FY-fdg">
+                                <rect key="frame" x="0.0" y="388" width="600" height="162"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <date key="date" timeIntervalSinceReferenceDate="463171295.77354503">
+                                    <!--2015-09-05 18:41:35 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="timePickerAction:" destination="POF-dT-o8b" eventType="valueChanged" id="1Gm-Uo-bQg"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="giV-Zn-OYC" firstAttribute="leading" secondItem="2Os-Mc-JYE" secondAttribute="leading" id="I5F-0q-iTl"/>
+                            <constraint firstAttribute="trailing" secondItem="sXK-FY-fdg" secondAttribute="trailing" id="Ipl-6a-tBe"/>
+                            <constraint firstItem="giV-Zn-OYC" firstAttribute="top" secondItem="add-rb-CNF" secondAttribute="bottom" id="Mbb-eh-mDr"/>
+                            <constraint firstItem="5S5-0T-rMN" firstAttribute="top" secondItem="sXK-FY-fdg" secondAttribute="bottom" constant="50" id="QDn-jx-XxQ"/>
+                            <constraint firstItem="sXK-FY-fdg" firstAttribute="leading" secondItem="2Os-Mc-JYE" secondAttribute="leading" id="maa-bm-7jt"/>
+                            <constraint firstAttribute="trailing" secondItem="giV-Zn-OYC" secondAttribute="trailing" id="q5F-Ch-70K"/>
+                            <constraint firstItem="sXK-FY-fdg" firstAttribute="top" secondItem="giV-Zn-OYC" secondAttribute="bottom" constant="35" id="sM1-Oz-fdQ"/>
+                            <constraint firstItem="sXK-FY-fdg" firstAttribute="top" secondItem="giV-Zn-OYC" secondAttribute="bottom" constant="50" id="tLi-0e-sOr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tLi-0e-sOr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="cip-1n-klF">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="foD-O5-5d0">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="oWn-fb-z5D" kind="unwind" identifier="Cancel" unwindAction="unwindToSegue:" id="6rh-3I-Yxc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="nEI-ia-4ih">
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <connections>
+                                <segue destination="oWn-fb-z5D" kind="unwind" identifier="Save" unwindAction="unwindToSegue:" id="Tk2-qi-s2e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="giV-Zn-OYC" id="FwC-6e-86w"/>
+                        <outlet property="timePickerWheel" destination="sXK-FY-fdg" id="RcP-5w-hkv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLQ-D1-DXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oWn-fb-z5D" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1747" y="302"/>
+        </scene>
+    </scenes>
+</document>
