@@ -12,20 +12,24 @@
 	<dict>
 		<key>7F104C37554B692540FD8A47873E416553D85EA2</key>
 		<string>https://github.com/ehyoo/Running-Alarm.git</string>
+		<key>D9C816369A2E8B6465C255A40409B42227CC27DB</key>
+		<string>https://github.com/adhk3210/Running-Alarm-master.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Running-Alarm.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7F104C37554B692540FD8A47873E416553D85EA2</key>
+		<string>../../../Running-Alarm</string>
+		<key>D9C816369A2E8B6465C255A40409B42227CC27DB</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ehyoo/Running-Alarm.git</string>
+	<string>https://github.com/adhk3210/Running-Alarm-master.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7F104C37554B692540FD8A47873E416553D85EA2</string>
+	<string>D9C816369A2E8B6465C255A40409B42227CC27DB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>7F104C37554B692540FD8A47873E416553D85EA2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Running-Alarm</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D9C816369A2E8B6465C255A40409B42227CC27DB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Running-Alarm-master</string>
 		</dict>
 	</array>
 </dict>
